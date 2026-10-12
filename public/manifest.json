@@ -1,0 +1,49 @@
+{
+  "short_name": "QRo",
+  "name": "QRo - Free Custom QR Code Generator",
+  "description": "Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#21F1A8",
+  "background_color": "#171717",
+  "categories": [
+    "utilities",
+    "productivity",
+    "graphics"
+  ]
+}

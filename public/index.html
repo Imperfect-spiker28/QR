@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#171717" />
+
+  <!-- Primary Meta Tags -->
+  <title>QRo - Free Custom QR Code Generator</title>
+  <meta name="title" content="QRo - Free Custom QR Code Generator" />
+  <meta name="description"
+    content="Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads." />
+  <link rel="canonical" href="https://qro.anwincm.dev/" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="QRo" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="QRo" />
+  <meta property="og:url" content="https://qro.anwincm.dev/" />
+  <meta property="og:title" content="QRo - Free Custom QR Code Generator" />
+  <meta property="og:description"
+    content="Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads." />
+  <meta property="og:image" content="https://qro.anwincm.dev/logo512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="QRo - Free Custom QR Code Generator" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://qro.anwincm.dev/" />
+  <meta name="twitter:title" content="QRo - Free Custom QR Code Generator" />
+  <meta name="twitter:description"
+    content="Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads." />
+  <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data: WebApplication + FAQPage for Search Engines & Answer Engines (AEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://qro.anwincm.dev/#app",
+        "name": "QRo",
+        "url": "https://qro.anwincm.dev/",
+        "applicationCategory": "DesignApplication, MultimediaApplication, Utility",
+        "operatingSystem": "All (Web Browser, Progressive Web App)",
+        "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads.",
+        "featureList": [
+          "100% Free with No Ads and No Registration Required",
+          "Multiple Content Types: URLs, Plain Text, Wi-Fi Networks, Contact vCards",
+          "Aesthetic Customization: Shapes, Custom Color Popover, Duo-Tone Gradients",
+          "Custom Logo Embedding with Smart Masking and Error Correction",
+          "High-Resolution Export in PNG (up to 2048px), Vector SVG, and JPG",
+          "100% Client-Side Offline Generation via Progressive Web App (PWA)"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Anwin C M",
+          "url": "https://anwincm.dev/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://qro.anwincm.dev/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I create a QR code for free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select your content type (Link, Plain Text, Wi-Fi, or Contact Card), enter your information, customize patterns, colors, logos, and frame if desired, and click 'Download QR Code'. Everything is generated instantly in your browser at zero cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I create a QR code without signing up?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QRo requires no account, email address, or signup. All generator options and high-resolution exports are immediately accessible to all visitors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I add my logo to a QR code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can upload custom PNG, JPG, or SVG logos or select the default monogram. QRo applies smart proportion limits (under 30%) and boosts Reed-Solomon error correction to Level H/Q to ensure 100% scan reliability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I customize QR code colors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can customize the foreground dot patterns, backgrounds, and dual-tone gradients using our custom color picker popover, complete with real-time scan contrast verification."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which file formats can I download?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "QRo exports your customized QR codes in high-resolution raster PNG (up to 2048px), infinitely scalable vector SVG (ideal for merchandise, print, and packaging), and standard JPG."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can QR codes be generated offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QRo operates as a Progressive Web App (PWA) with a dedicated service worker. All QR calculations and graphic rendering happen 100% client-side in your browser, enabling full functionality without an active internet connection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is QRo free and ad-free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QRo is 100% free with no advertisements, no paywalls, no sponsored redirects, and no hidden subscriptions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do QRo QR codes expire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. QRo generates static direct QR codes where your data is encoded directly into the matrix. Because it does not route through any intermediary redirect service, your QR codes will never expire."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <div style="max-width: 800px; margin: 40px auto; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #171717; color: #f3f4f6; border-radius: 16px; border: 1px solid rgba(33, 241, 168, 0.4);">
+      <h1 style="color: #21F1A8; font-size: 28px; margin-bottom: 8px;">QRo - Free Custom QR Code Generator</h1>
+      <p style="font-size: 16px; line-height: 1.6; color: #d1d5db;">
+        Create beautiful, customizable QR codes for links, text, Wi-Fi networks, and contact vCards.
+        Customize styles, colors, and logos, then download in high-res PNG, vector SVG, or JPG for free.
+        No signup required. No ads. 100% client-side and offline-capable.
+      </p>
+      <h2 style="color: #21F1A8; font-size: 20px; margin-top: 24px;">Features</h2>
+      <ul style="line-height: 1.8; color: #9ca3af;">
+        <li>Link, Plain Text, Wi-Fi (WPA/WEP), and Contact Card (vCard) support</li>
+        <li>Custom colors, vibrant duo-tone gradients, and live contrast validation</li>
+        <li>High-resolution raster PNG (up to 2048px), vector SVG, and JPG downloads</li>
+        <li>Custom logo uploading and center emblem masking</li>
+        <li>Works offline as a Progressive Web App (PWA)</li>
+      </ul>
+      <p style="margin-top: 20px; color: #9ca3af; font-size: 14px;">
+        Please enable JavaScript in your browser to use the interactive QR code creator.
+      </p>
+    </div>
+  </noscript>
+
+  <div id="root"></div>
+</body>
+
+</html>

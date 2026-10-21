@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Code Logo Embedding & Reed-Solomon Error Correction | QRo Guide</title>
+  <meta name="title" content="QR Code Logo Embedding & Reed-Solomon Error Correction | QRo Guide" />
+  <meta name="description" content="How to embed logos into QR codes without breaking scans. Understand Reed-Solomon Error Correction Level H, the 30% area rule, and quiet zones." />
+  <link rel="canonical" href="https://qro.anwincm.dev/guides/logo-error-correction" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/static-pages.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="QRo" />
+  <meta property="og:url" content="https://qro.anwincm.dev/guides/logo-error-correction" />
+  <meta property="og:title" content="QR Code Logo Embedding & Reed-Solomon Error Correction | QRo Guide" />
+  <meta property="og:description" content="How to embed logos into QR codes without breaking scans. Understand Reed-Solomon Error Correction Level H, the 30% area rule, and quiet zones." />
+  <meta property="og:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://qro.anwincm.dev/guides/logo-error-correction" />
+  <meta name="twitter:title" content="QR Code Logo Embedding & Reed-Solomon Error Correction | QRo Guide" />
+  <meta name="twitter:description" content="How to embed logos into QR codes without breaking scans. Understand Reed-Solomon Error Correction Level H, the 30% area rule, and quiet zones." />
+  <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qro.anwincm.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://qro.anwincm.dev/guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Logo & Error Correction",
+            "item": "https://qro.anwincm.dev/guides/logo-error-correction"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://qro.anwincm.dev/guides/logo-error-correction#article",
+        "headline": "QR Code Logo Embedding & Reed-Solomon Error Correction Level H",
+        "description": "How Reed-Solomon algebraic error correction allows brand logo placement over a QR code matrix while maintaining 100% scan recovery.",
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Anwin C M",
+          "url": "https://anwincm.dev/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "QRo",
+          "url": "https://qro.anwincm.dev/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sp-header">
+    <div class="sp-header-inner">
+      <a href="/" class="sp-brand" title="QRo QR Code Generator">
+        <img src="/logo192.png" alt="QRo Logo" class="sp-brand-logo" />
+        <span>QRo</span>
+      </a>
+      <nav class="sp-nav">
+        <a href="/" class="sp-nav-link">Generator</a>
+        <a href="/templates" class="sp-nav-link">Templates</a>
+        <a href="/faq" class="sp-nav-link">FAQ</a>
+        <a href="/guides" class="sp-nav-link active">Guides</a>
+      </nav>
+      <a href="/#generator" class="sp-cta-btn">Create QR Code</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="sp-container">
+    <nav class="sp-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/guides">Guides</a>
+      <span>/</span>
+      <span>Logo & Error Correction</span>
+    </nav>
+
+    <div class="sp-eyebrow">MATHEMATICAL ERROR CORRECTION</div>
+    <h1 class="sp-title">Logo Embedding & Reed-Solomon Level H</h1>
+    <p class="sp-subtitle">
+      How Reed-Solomon algebraic redundancy works, the mathematical 30% area limit, and why center logos never corrupt your destination payload.
+    </p>
+
+    <article class="sp-content">
+      <h2>The Secret Behind Logo QR Codes: Reed-Solomon Codes</h2>
+      <p>
+        In the standard QR code specification (ISO/IEC 18004), data bytes are accompanied by <strong>Reed-Solomon error correction codewords</strong>. Originally developed for deep-space telemetry and CD-ROMs, Reed-Solomon mathematics allow decoders to reconstruct damaged, smudged, or missing data blocks automatically.
+      </p>
+      <p>
+        When you place a logo in the center of a QR code, the camera treats that central emblem as "damaged or obscured modules" and utilizes the mathematical redundancy to solve for the original bytes.
+      </p>
+
+      <h2>The Four Error Correction Levels</h2>
+      <div class="sp-table-wrapper">
+        <table class="sp-table">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Recovery Capability</th>
+              <th>Suitable For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Level L (Low)</strong></td>
+              <td>Up to 7% damage recovery</td>
+              <td>Clean high-density text with no logos</td>
+            </tr>
+            <tr>
+              <td><strong>Level M (Medium)</strong></td>
+              <td>Up to 15% damage recovery</td>
+              <td>Standard default for clean digital barcodes</td>
+            </tr>
+            <tr>
+              <td><strong>Level Q (Quartile)</strong></td>
+              <td>Up to 25% damage recovery</td>
+              <td>Industrial environments, small logos</td>
+            </tr>
+            <tr>
+              <td><strong>Level H (High)</strong></td>
+              <td>Up to 30% damage recovery</td>
+              <td><strong>Brand logos, emblems, and harsh print conditions</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>The 30% Mathematical Ceiling Rule</h2>
+      <p>
+        Because Level H provides exactly 30% recovery capacity, <strong>a center logo must never occupy more than 28% to 30% of the total QR matrix surface area</strong>. Exceeding this boundary consumes 100% of the mathematical error buffer, leaving zero margin for camera glare, finger shadows, or printing scratches.
+      </p>
+      <p>
+        Furthermore, the logo must never overlap the three corner <strong>Finder Patterns (eye marks)</strong> or the alignment patterns located near the bottom right.
+      </p>
+
+      <h2>Center Logo Padding & Masking</h2>
+      <p>
+        To prevent visual interference between the logo graphic and adjacent matrix modules, a clean background buffer (masking margin) must separate the logo from the nearest dots. QRo enforces this automatically with safe margin padding and clean logo container geometry.
+      </p>
+
+      <div class="sp-callout">
+        <div class="sp-callout-title">
+          <span>Automatic Safety in QRo</span>
+        </div>
+        <p>
+          Whenever you upload a custom logo or keep the default Anwin emblem, QRo automatically locks the Reed-Solomon configuration to <strong>Level H</strong> and restricts the center graphic to 28% width, guaranteeing reliable scans on every test device.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-inner">
+      <div>
+        <strong>QRo</strong> — Free, client-side, open-source QR code generator.
+      </div>
+      <div class="sp-footer-links">
+        <a href="/">Generator</a>
+        <a href="/templates">Templates</a>
+        <a href="/faq">FAQ</a>
+        <a href="https://anwincm.dev/" target="_blank" rel="noreferrer">Crafted by Anwin C M</a>
+        <a href="https://github.com/Imperfect-spiker28/QR" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

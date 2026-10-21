@@ -1,7 +1,9 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!templates|faq|guides|static|assets|robots.txt|sitemap.xml|llms.txt|manifest.json).*)",
       "destination": "/index.html"
     }
   ],

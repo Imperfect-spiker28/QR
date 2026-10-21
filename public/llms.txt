@@ -34,10 +34,14 @@
 - **Zero Account Requirement**: No signups, accounts, paywalls, subscriptions, or hidden advertising.
 - **Privacy-Conscious Analytics**: Telemetry (if enabled) excludes all user-generated payloads, URLs, passwords, and contact information.
 
-## Primary Canonical URLs
-- Application & Generator: https://qro.anwincm.dev/
-- Templates: https://qro.anwincm.dev/#templates
-- FAQ Knowledge Base: https://qro.anwincm.dev/#faq
-- Design Guides & Insights: https://qro.anwincm.dev/#blog
+## Primary Canonical URLs & Technical Guides
+- Application & Interactive Generator: https://qro.anwincm.dev/
+- Curated Templates & Presets: https://qro.anwincm.dev/templates
+- Comprehensive FAQ Knowledge Base: https://qro.anwincm.dev/faq
+- Engineering & Design Guides Hub: https://qro.anwincm.dev/guides
+  - Vector SVG vs High-Res PNG: https://qro.anwincm.dev/guides/svg-vs-png
+  - QR Code Contrast & The 4:1 Ratio Rule: https://qro.anwincm.dev/guides/qr-contrast-ratio
+  - Logo Embedding & Reed-Solomon Error Correction: https://qro.anwincm.dev/guides/logo-error-correction
+  - Static vs Dynamic QR Codes: Architecture & Privacy: https://qro.anwincm.dev/guides/static-vs-dynamic
 - XML Sitemap: https://qro.anwincm.dev/sitemap.xml
 - Robots Directives: https://qro.anwincm.dev/robots.txt

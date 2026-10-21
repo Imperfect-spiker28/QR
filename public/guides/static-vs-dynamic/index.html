@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Static vs Dynamic QR Codes: Architecture, Privacy & Lifespan | QRo Guide</title>
+  <meta name="title" content="Static vs Dynamic QR Codes: Architecture, Privacy & Lifespan | QRo Guide" />
+  <meta name="description" content="Compare static vs dynamic QR codes. Learn how direct matrix encoding eliminates subscription fees, prevents redirect outages, and guarantees user privacy." />
+  <link rel="canonical" href="https://qro.anwincm.dev/guides/static-vs-dynamic" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/static-pages.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="QRo" />
+  <meta property="og:url" content="https://qro.anwincm.dev/guides/static-vs-dynamic" />
+  <meta property="og:title" content="Static vs Dynamic QR Codes: Architecture, Privacy & Lifespan | QRo Guide" />
+  <meta property="og:description" content="Compare static vs dynamic QR codes. Learn how direct matrix encoding eliminates subscription fees, prevents redirect outages, and guarantees user privacy." />
+  <meta property="og:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://qro.anwincm.dev/guides/static-vs-dynamic" />
+  <meta name="twitter:title" content="Static vs Dynamic QR Codes: Architecture, Privacy & Lifespan | QRo Guide" />
+  <meta name="twitter:description" content="Compare static vs dynamic QR codes. Learn how direct matrix encoding eliminates subscription fees, prevents redirect outages, and guarantees user privacy." />
+  <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qro.anwincm.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://qro.anwincm.dev/guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Static vs Dynamic",
+            "item": "https://qro.anwincm.dev/guides/static-vs-dynamic"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://qro.anwincm.dev/guides/static-vs-dynamic#article",
+        "headline": "Static vs Dynamic QR Codes: Architectural Differences, Privacy & Lifespan",
+        "description": "Comprehensive technical guide contrasting static direct-encoding QR codes against dynamic redirect services, analyzing subscription lock-in and security.",
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Anwin C M",
+          "url": "https://anwincm.dev/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "QRo",
+          "url": "https://qro.anwincm.dev/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sp-header">
+    <div class="sp-header-inner">
+      <a href="/" class="sp-brand" title="QRo QR Code Generator">
+        <img src="/logo192.png" alt="QRo Logo" class="sp-brand-logo" />
+        <span>QRo</span>
+      </a>
+      <nav class="sp-nav">
+        <a href="/" class="sp-nav-link">Generator</a>
+        <a href="/templates" class="sp-nav-link">Templates</a>
+        <a href="/faq" class="sp-nav-link">FAQ</a>
+        <a href="/guides" class="sp-nav-link active">Guides</a>
+      </nav>
+      <a href="/#generator" class="sp-cta-btn">Create QR Code</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="sp-container">
+    <nav class="sp-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/guides">Guides</a>
+      <span>/</span>
+      <span>Static vs Dynamic</span>
+    </nav>
+
+    <div class="sp-eyebrow">ARCHITECTURE & PRIVACY</div>
+    <h1 class="sp-title">Static vs Dynamic QR Codes</h1>
+    <p class="sp-subtitle">
+      Why direct matrix encoding guarantees permanent scannability, protects user privacy, and avoids predatory subscription expiration traps.
+    </p>
+
+    <article class="sp-content">
+      <h2>The Architectural Difference</h2>
+      <p>
+        The fundamental distinction between <strong>Static</strong> and <strong>Dynamic</strong> QR codes lies in where the final destination data is stored:
+      </p>
+      <ul>
+        <li>
+          <strong>Static QR Codes (QRo Model):</strong> Your raw destination (e.g. <code>https://yourdomain.com</code>, a Wi-Fi password, or a vCard) is converted directly into binary modules printed in the matrix. When a camera scans the code, it decodes the payload instantly without contacting any third-party intermediary.
+        </li>
+        <li>
+          <strong>Dynamic QR Codes (SaaS Model):</strong> The printed code contains a short redirect URL pointing to a vendor's proxy server (e.g. <code>https://vendor.co/r/x91z</code>). The server logs visitor metrics and redirects the browser to the destination.
+        </li>
+      </ul>
+
+      <h2>Comparison Table</h2>
+      <div class="sp-table-wrapper">
+        <table class="sp-table">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Static QR Codes (QRo)</th>
+              <th>Dynamic QR Codes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Lifespan</strong></td>
+              <td>Permanent (never expires)</td>
+              <td>Tied to vendor account/subscription</td>
+            </tr>
+            <tr>
+              <td><strong>Middleman Server</strong></td>
+              <td>None (100% direct)</td>
+              <td>Mandatory vendor proxy server</td>
+            </tr>
+            <tr>
+              <td><strong>Subscription Costs</strong></td>
+              <td>100% Free forever</td>
+              <td>Often $10 - $50/month recurring</td>
+            </tr>
+            <tr>
+              <td><strong>Payload Privacy</strong></td>
+              <td>Complete (runs client-side)</td>
+              <td>Vendor intercepts visitor IP & scans</td>
+            </tr>
+            <tr>
+              <td><strong>Offline Scannability</strong></td>
+              <td>Works offline (Wi-Fi, vCard, text)</td>
+              <td>Fails completely without internet</td>
+            </tr>
+            <tr>
+              <td><strong>Editable After Print</strong></td>
+              <td>No (re-print required)</td>
+              <td>Yes (via vendor dashboard)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>The Dynamic QR Trap: The Subscription Lock-In</h2>
+      <p>
+        Many commercial QR generators advertise "free dynamic codes." However, after a 14-day trial period or once you print thousands of flyers, business cards, or product packaging boxes, the vendor redirects your scans to a paywall demanding monthly subscription fees. If you cancel your subscription or the company shuts down, your printed codes break permanently.
+      </p>
+      <p>
+        Static QR codes eliminate this liability. Because no server sits between the printed paper and the visitor's device, a static code printed today will still scan correctly in 50 years as long as the paper remains readable and your destination website exists.
+      </p>
+
+      <h2>How to Track Static QR Code Scans Without a Middleman</h2>
+      <p>
+        If you want to track how many visitors come from a printed flyer or business card, you do not need a paid dynamic subscription. Simply add standard Google Analytics <strong>UTM parameters</strong> to your URL before generating:
+      </p>
+      <p>
+        <code>https://example.com/?utm_source=qr&utm_medium=print&utm_campaign=summer_flyer</code>
+      </p>
+      <p>
+        When visitors scan the code, Google Analytics or Plausible records the campaign source directly on your own website, preserving 100% user privacy and eliminating third-party redirect delays.
+      </p>
+
+      <div class="sp-callout">
+        <div class="sp-callout-title">
+          <span>QRo Guarantee</span>
+        </div>
+        <p>
+          QRo only creates static, direct-encoded QR codes. We will never insert a redirect URL, never charge a subscription fee, and never expire your codes.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-inner">
+      <div>
+        <strong>QRo</strong> — Free, client-side, open-source QR code generator.
+      </div>
+      <div class="sp-footer-links">
+        <a href="/">Generator</a>
+        <a href="/templates">Templates</a>
+        <a href="/faq">FAQ</a>
+        <a href="https://anwincm.dev/" target="_blank" rel="noreferrer">Crafted by Anwin C M</a>
+        <a href="https://github.com/Imperfect-spiker28/QR" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

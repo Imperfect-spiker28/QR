@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Code Contrast & Scannability: The 4:1 Ratio Rule | QRo Guide</title>
+  <meta name="title" content="QR Code Contrast & Scannability: The 4:1 Ratio Rule | QRo Guide" />
+  <meta name="description" content="Why high contrast is required for QR code scannability. Understand optical camera sensor luminance delta, inverted colors, and low-light scanning tips." />
+  <link rel="canonical" href="https://qro.anwincm.dev/guides/qr-contrast-ratio" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/static-pages.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="QRo" />
+  <meta property="og:url" content="https://qro.anwincm.dev/guides/qr-contrast-ratio" />
+  <meta property="og:title" content="QR Code Contrast & Scannability: The 4:1 Ratio Rule | QRo Guide" />
+  <meta property="og:description" content="Why high contrast is required for QR code scannability. Understand optical camera sensor luminance delta, inverted colors, and low-light scanning tips." />
+  <meta property="og:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://qro.anwincm.dev/guides/qr-contrast-ratio" />
+  <meta name="twitter:title" content="QR Code Contrast & Scannability: The 4:1 Ratio Rule | QRo Guide" />
+  <meta name="twitter:description" content="Why high contrast is required for QR code scannability. Understand optical camera sensor luminance delta, inverted colors, and low-light scanning tips." />
+  <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qro.anwincm.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://qro.anwincm.dev/guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Contrast & Scannability",
+            "item": "https://qro.anwincm.dev/guides/qr-contrast-ratio"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://qro.anwincm.dev/guides/qr-contrast-ratio#article",
+        "headline": "QR Code Contrast & Scannability: The 4:1 Luminance Ratio Rule",
+        "description": "Technical analysis of how optical smartphone camera sensors decode QR module contrast, luminance delta, and safe background pairing.",
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Anwin C M",
+          "url": "https://anwincm.dev/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "QRo",
+          "url": "https://qro.anwincm.dev/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sp-header">
+    <div class="sp-header-inner">
+      <a href="/" class="sp-brand" title="QRo QR Code Generator">
+        <img src="/logo192.png" alt="QRo Logo" class="sp-brand-logo" />
+        <span>QRo</span>
+      </a>
+      <nav class="sp-nav">
+        <a href="/" class="sp-nav-link">Generator</a>
+        <a href="/templates" class="sp-nav-link">Templates</a>
+        <a href="/faq" class="sp-nav-link">FAQ</a>
+        <a href="/guides" class="sp-nav-link active">Guides</a>
+      </nav>
+      <a href="/#generator" class="sp-cta-btn">Create QR Code</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="sp-container">
+    <nav class="sp-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/guides">Guides</a>
+      <span>/</span>
+      <span>Contrast & Scannability</span>
+    </nav>
+
+    <div class="sp-eyebrow">OPTICAL SCANNABILITY</div>
+    <h1 class="sp-title">QR Code Contrast & Scannability</h1>
+    <p class="sp-subtitle">
+      Why high optical luminance contrast is mandatory, how smartphone camera binarization algorithms work, and why low-contrast codes fail.
+    </p>
+
+    <article class="sp-content">
+      <h2>How Camera Sensors Read QR Codes</h2>
+      <p>
+        When you point a smartphone camera at a QR code, the camera firmware does not see colors the way human eyes do. Instead, the image sensor performs a process called <strong>binarization (adaptive thresholding)</strong>.
+      </p>
+      <p>
+        Adaptive thresholding converts every pixel of the camera feed into either a <strong>1 (dark module)</strong> or a <strong>0 (light module)</strong> based on the relative luminance delta between adjacent blocks. If the delta between the foreground dots and the background falls below a safe threshold, the binarization algorithm produces noise, making matrix decoding impossible.
+      </p>
+
+      <h2>The 4:1 Contrast Ratio Standard</h2>
+      <p>
+        Industry standards require a minimum contrast ratio of <strong>4:1</strong> (derived from WCAG 2.1 AA luminance formulas). When designing customized QR codes:
+      </p>
+      <ul>
+        <li><strong>High Contrast (Pass):</strong> Black on white (21:1), Dark navy on white (14:1), Deep green on cream (8:1).</li>
+        <li><strong>Borderline Contrast (Caution):</strong> Bright emerald on dark gray (4.5:1), Yellow on white (1.8:1 - fails), Light gray on white (2.1:1 - fails).</li>
+      </ul>
+
+      <h2>Dark Modules vs Light Backgrounds (The Inversion Dilemma)</h2>
+      <p>
+        Standard QR decoders look for <strong>dark modules on a light background</strong>. While modern iOS and high-end Android phones support inverted codes (light modules on a dark background), older or budget smartphone cameras may take 2 to 5 seconds longer to detect the three finder patterns (corner eye marks).
+      </p>
+      <p>
+        For mission-critical print runs (e.g. restaurant table menus, packaging, or outdoor advertisements), dark foreground dots on light backgrounds remain the most reliable combination globally.
+      </p>
+
+      <h2>Quiet Zone (Margin) Requirements</h2>
+      <p>
+        A QR code requires a clean, unobstructed perimeter known as the <strong>Quiet Zone</strong>. The quiet zone must be at least 4 modules wide and match the background color. Placing text, borders, or images directly against the outer corner finder patterns disrupts edge detection.
+      </p>
+
+      <div class="sp-callout">
+        <div class="sp-callout-title">
+          <span>QRo Built-In Contrast Validation</span>
+        </div>
+        <p>
+          QRo automatically evaluates your color choices in real time. The color popover highlights scan contrast warnings if your chosen foreground and background pairings risk optical decoding errors.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-inner">
+      <div>
+        <strong>QRo</strong> — Free, client-side, open-source QR code generator.
+      </div>
+      <div class="sp-footer-links">
+        <a href="/">Generator</a>
+        <a href="/templates">Templates</a>
+        <a href="/faq">FAQ</a>
+        <a href="https://anwincm.dev/" target="_blank" rel="noreferrer">Crafted by Anwin C M</a>
+        <a href="https://github.com/Imperfect-spiker28/QR" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

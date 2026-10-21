@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Code Engineering & Design Guides | QRo</title>
+  <meta name="title" content="QR Code Engineering & Design Guides | QRo" />
+  <meta name="description" content="Technical guides on QR code scannability, contrast ratios, vector SVG vs raster PNG exports, center logo embedding, and Wi-Fi security standards." />
+  <link rel="canonical" href="https://qro.anwincm.dev/guides" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/static-pages.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="QRo" />
+  <meta property="og:url" content="https://qro.anwincm.dev/guides" />
+  <meta property="og:title" content="QR Code Engineering & Design Guides | QRo" />
+  <meta property="og:description" content="Technical guides on QR code scannability, contrast ratios, vector SVG vs raster PNG exports, center logo embedding, and Wi-Fi security standards." />
+  <meta property="og:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://qro.anwincm.dev/guides" />
+  <meta name="twitter:title" content="QR Code Engineering & Design Guides | QRo" />
+  <meta name="twitter:description" content="Technical guides on QR code scannability, contrast ratios, vector SVG vs raster PNG exports, center logo embedding, and Wi-Fi security standards." />
+  <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://qro.anwincm.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://qro.anwincm.dev/guides"
+          }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://qro.anwincm.dev/guides#page",
+        "name": "QR Code Engineering & Design Guides",
+        "url": "https://qro.anwincm.dev/guides",
+        "description": "Technical library of QR code best practices, error correction mathematics, print guidelines, and security architecture.",
+        "publisher": {
+          "@type": "Person",
+          "name": "Anwin C M",
+          "url": "https://anwincm.dev/"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sp-header">
+    <div class="sp-header-inner">
+      <a href="/" class="sp-brand" title="QRo QR Code Generator">
+        <img src="/logo192.png" alt="QRo Logo" class="sp-brand-logo" />
+        <span>QRo</span>
+      </a>
+      <nav class="sp-nav">
+        <a href="/" class="sp-nav-link">Generator</a>
+        <a href="/templates" class="sp-nav-link">Templates</a>
+        <a href="/faq" class="sp-nav-link">FAQ</a>
+        <a href="/guides" class="sp-nav-link active">Guides</a>
+      </nav>
+      <a href="/#generator" class="sp-cta-btn">Create QR Code</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="sp-container-wide">
+    <nav class="sp-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Guides</span>
+    </nav>
+
+    <div class="sp-eyebrow">ENGINEERING & PRINT STANDARDS</div>
+    <h1 class="sp-title">QR Code Design & Technical Guides</h1>
+    <p class="sp-subtitle">
+      Deep-dives into matrix contrast mathematics, Reed-Solomon error correction, print resolution standards, and privacy architecture.
+    </p>
+
+    <div class="sp-grid-2">
+      <!-- Guide 1 -->
+      <a href="/guides/svg-vs-png" class="sp-card" style="text-decoration: none;">
+        <div class="sp-eyebrow">FILE FORMATS & PRINT</div>
+        <h2 class="sp-card-title">Vector SVG vs High-Resolution PNG</h2>
+        <p class="sp-card-desc">
+          Compare mathematical vector curves with fixed pixel bitmaps. Learn why SVG is mandatory for billboards, merchandise, and commercial offset printing without pixelation.
+        </p>
+        <div style="margin-top: 14px; font-weight: 700; font-size: 0.85rem; color: var(--accent-primary);">Read Guide &rarr;</div>
+      </a>
+
+      <!-- Guide 2 -->
+      <a href="/guides/qr-contrast-ratio" class="sp-card" style="text-decoration: none;">
+        <div class="sp-eyebrow">OPTICAL SCANNABILITY</div>
+        <h2 class="sp-card-title">Luminance Contrast: The 4:1 Ratio Rule</h2>
+        <p class="sp-card-desc">
+          Understand camera sensor luminance delta, why light-on-dark inverted codes fail on budget mobile hardware, and how to verify scan safety before mass distribution.
+        </p>
+        <div style="margin-top: 14px; font-weight: 700; font-size: 0.85rem; color: var(--accent-primary);">Read Guide &rarr;</div>
+      </a>
+
+      <!-- Guide 3 -->
+      <a href="/guides/logo-error-correction" class="sp-card" style="text-decoration: none;">
+        <div class="sp-eyebrow">BRANDING & REED-SOLOMON</div>
+        <h2 class="sp-card-title">Logo Embedding & Error Correction Level H</h2>
+        <p class="sp-card-desc">
+          How Reed-Solomon 30% recovery tolerance protects QR matrix data when embedding center emblems, including quiet zones and safe area padding calculations.
+        </p>
+        <div style="margin-top: 14px; font-weight: 700; font-size: 0.85rem; color: var(--accent-primary);">Read Guide &rarr;</div>
+      </a>
+
+      <!-- Guide 4 -->
+      <a href="/guides/static-vs-dynamic" class="sp-card" style="text-decoration: none;">
+        <div class="sp-eyebrow">PRIVACY & ARCHITECTURE</div>
+        <h2 class="sp-card-title">Static vs Dynamic QR Codes: Lifespan & Privacy</h2>
+        <p class="sp-card-desc">
+          Compare direct matrix encoding against proprietary redirect servers. Understand subscription paywalls, domain expiration risks, and zero-leak client-side generation.
+        </p>
+        <div style="margin-top: 14px; font-weight: 700; font-size: 0.85rem; color: var(--accent-primary);">Read Guide &rarr;</div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-inner">
+      <div>
+        <strong>QRo</strong> — Free, client-side, open-source QR code generator.
+      </div>
+      <div class="sp-footer-links">
+        <a href="/">Generator</a>
+        <a href="/templates">Templates</a>
+        <a href="/faq">FAQ</a>
+        <a href="https://anwincm.dev/" target="_blank" rel="noreferrer">Crafted by Anwin C M</a>
+        <a href="https://github.com/Imperfect-spiker28/QR" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

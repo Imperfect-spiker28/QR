@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/((?!templates|faq|guides|static|assets|robots.txt|sitemap.xml|llms.txt|manifest.json).*)",
+      "source": "/((?!templates|faq|guides|static|assets|robots.txt|sitemap.xml|llms.txt|ai-catalog.json|.well-known|manifest.json).*)",
       "destination": "/index.html"
     }
   ],
@@ -39,8 +39,38 @@
       ]
     },
     {
+      "source": "/(.*ai-catalog.json)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=43200"
+        }
+      ]
+    },
+    {
       "source": "/(robots.txt|sitemap.xml|llms.txt|manifest.json)",
       "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=43200"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400, stale-while-revalidate=43200"

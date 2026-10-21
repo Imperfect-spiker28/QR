@@ -128,7 +128,7 @@ body {
   background: 
     radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 20% 80%, rgba(5, 150, 105, 0.05) 0%, transparent 50%),
-    url('./assets/backdrop-light.png') center center / cover no-repeat fixed;
+    url('./assets/backdrop-light.jpg') center center / cover no-repeat fixed;
 }
 
 .qro-backdrop-overlay {

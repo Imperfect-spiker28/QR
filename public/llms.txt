@@ -3,11 +3,24 @@
 > Open-source, client-side, customizable QR code generator creating static QR codes for links, text, Wi-Fi networks, and contact cards (vCards).
 
 ## Overview
-- **Official Website**: https://qro.anwincm.dev/
-- **Project Owner & Creator**: Anwin C M (https://anwincm.dev/)
-- **Repository**: https://github.com/Imperfect-spiker28/QR
-- **License**: MIT License (100% Free, Open Source)
-- **Architecture**: 100% Client-Side Progressive Web App (PWA) with offline generation support via HTML5 Canvas and SVG.
+- [QRo Web Application](https://qro.anwincm.dev/): Client-side interactive QR code generator with real-time preview and custom styling.
+- [GitHub Repository](https://github.com/Imperfect-spiker28/QR): Official open-source repository licensed under the MIT License.
+- [Creator Profile](https://anwincm.dev/): Anwin C M, creator and maintainer of QRo.
+- [XML Sitemap](https://qro.anwincm.dev/sitemap.xml): Machine-readable index of all indexable canonical URLs.
+- [Robots Directives](https://qro.anwincm.dev/robots.txt): Crawler indexing and agent retrieval directives.
+- [AI Catalog Manifest](https://qro.anwincm.dev/ai-catalog.json): Machine-readable Agent Resource Discovery (ARD) capability manifest.
+
+## Primary Pages & Capabilities
+- [Interactive QR Generator](https://qro.anwincm.dev/): Full-featured browser-based creator for URLs, plain text, Wi-Fi credentials, and contact cards (vCards).
+- [Curated QR Templates](https://qro.anwincm.dev/templates): Directory of aesthetic presets including Tiffany Noir, Sunset Glow, Cyberpunk Blue, and Classic Monochrome.
+- [Frequently Asked Questions](https://qro.anwincm.dev/faq): Comprehensive knowledge base answering 9 core questions on QR generation, error correction, offline generation, and print formats.
+- [Engineering & Design Guides](https://qro.anwincm.dev/guides): Technical guides covering scannability rules, optical contrast, print standards, and privacy architecture.
+
+## Technical Guides
+- [Vector SVG vs Raster PNG](https://qro.anwincm.dev/guides/svg-vs-png): Technical comparison of infinite vector scalability vs bitmap resolution for commercial print and digital sharing.
+- [QR Code Contrast & Scannability](https://qro.anwincm.dev/guides/qr-contrast-ratio): Detailed explanation of optical camera sensor binarization, the 4:1 luminance contrast rule, and quiet zone requirements.
+- [Logo Embedding & Reed-Solomon Error Correction](https://qro.anwincm.dev/guides/logo-error-correction): How Reed-Solomon Level H mathematics allow safe center emblem embedding with a 30% area ceiling.
+- [Static vs Dynamic QR Codes](https://qro.anwincm.dev/guides/static-vs-dynamic): Architectural comparison showing why direct matrix encoding eliminates subscription paywalls and redirect outage risks.
 
 ## Key Capabilities & Supported Content Types
 1. **Website Links (URLs)**: Direct encoding of destination URLs. No intermediary redirect servers, tracking URLs, or forced domain proxies.
@@ -33,15 +46,3 @@
 - **No Tracking Middleman**: Destination links are encoded directly without redirect URLs or subscription expirations.
 - **Zero Account Requirement**: No signups, accounts, paywalls, subscriptions, or hidden advertising.
 - **Privacy-Conscious Analytics**: Telemetry (if enabled) excludes all user-generated payloads, URLs, passwords, and contact information.
-
-## Primary Canonical URLs & Technical Guides
-- Application & Interactive Generator: https://qro.anwincm.dev/
-- Curated Templates & Presets: https://qro.anwincm.dev/templates
-- Comprehensive FAQ Knowledge Base: https://qro.anwincm.dev/faq
-- Engineering & Design Guides Hub: https://qro.anwincm.dev/guides
-  - Vector SVG vs High-Res PNG: https://qro.anwincm.dev/guides/svg-vs-png
-  - QR Code Contrast & The 4:1 Ratio Rule: https://qro.anwincm.dev/guides/qr-contrast-ratio
-  - Logo Embedding & Reed-Solomon Error Correction: https://qro.anwincm.dev/guides/logo-error-correction
-  - Static vs Dynamic QR Codes: Architecture & Privacy: https://qro.anwincm.dev/guides/static-vs-dynamic
-- XML Sitemap: https://qro.anwincm.dev/sitemap.xml
-- Robots Directives: https://qro.anwincm.dev/robots.txt

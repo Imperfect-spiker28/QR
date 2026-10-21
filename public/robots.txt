@@ -31,3 +31,6 @@ Sitemap: https://qro.anwincm.dev/sitemap.xml
 
 # LLM / AI Summary Specification
 # https://qro.anwincm.dev/llms.txt
+
+# Agent Resource Discovery (ARD) Capability Manifest
+# https://qro.anwincm.dev/ai-catalog.json

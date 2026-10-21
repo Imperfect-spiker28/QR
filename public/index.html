@@ -64,12 +64,26 @@
     content="Create free custom QR codes for links, text, Wi-Fi, and contacts. Customize colors, styles, logos, and captions, then download your QR codes in PNG, SVG, or JPG." />
   <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
 
-  <!-- Google Fonts Preconnect -->
+  <!-- Google Fonts Non-Render-Blocking Asynchronous Loading (Eliminates 1.6s render block) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+  </noscript>
 
   <!-- JSON-LD Structured Data: WebSite + Person + WebApplication + HowTo + FAQPage (AEO/GEO) -->
   <script type="application/ld+json">

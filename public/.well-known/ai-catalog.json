@@ -1,0 +1,49 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "QRo",
+    "documentationUrl": "https://qro.anwincm.dev/guides",
+    "logoUrl": "https://qro.anwincm.dev/logo512.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:qro.anwincm.dev:qr-generator",
+      "displayName": "QRo QR Code Generator",
+      "description": "Client-side, privacy-first QR code generator for URLs, plain text, Wi-Fi credentials, and contact cards (vCards) with custom styling, logo embedding, and vector SVG/PNG exports.",
+      "type": "application/json",
+      "url": "https://qro.anwincm.dev/",
+      "representativeQueries": [
+        "Create a free QR code online",
+        "Generate a QR code with logo",
+        "Create a Wi-Fi QR code without tracking",
+        "Export vector SVG QR code for print",
+        "Custom color QR code generator",
+        "Static QR code generator without subscription"
+      ]
+    },
+    {
+      "identifier": "urn:air:qro.anwincm.dev:templates",
+      "displayName": "QRo Curated Templates",
+      "description": "Designer presets for QR codes with tailored color palettes, rounded dots, and framed captions.",
+      "type": "application/json",
+      "url": "https://qro.anwincm.dev/templates",
+      "representativeQueries": [
+        "Aesthetic QR code templates",
+        "Tiffany Noir QR code style",
+        "Modern QR code presets"
+      ]
+    },
+    {
+      "identifier": "urn:air:qro.anwincm.dev:faq",
+      "displayName": "QRo Knowledge Base & FAQ",
+      "description": "Complete technical and usage documentation on QR code error correction, print guidelines, and static encoding.",
+      "type": "application/json",
+      "url": "https://qro.anwincm.dev/faq",
+      "representativeQueries": [
+        "Do static QR codes expire?",
+        "How to add logo to QR code safely",
+        "What is the best format to print a QR code?"
+      ]
+    }
+  ]
+}

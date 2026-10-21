@@ -3,6 +3,20 @@
 
 <head>
   <meta charset="utf-8" />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('qro_theme_v2');
+        var theme = 'dark';
+        if (saved === 'light') {
+          theme = 'light';
+        } else if (saved === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          theme = 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
@@ -10,12 +24,17 @@
   <meta name="theme-color" content="#171717" />
 
   <!-- Primary Meta Tags -->
-  <title>QRo - Free Custom QR Code Generator</title>
-  <meta name="title" content="QRo - Free Custom QR Code Generator" />
+  <title>QRo | Free Custom QR Code Generator Online</title>
+  <meta name="title" content="QRo | Free Custom QR Code Generator Online" />
   <meta name="description"
-    content="Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads." />
+    content="Create free custom QR codes for links, text, Wi-Fi, and contacts. Customize colors, styles, logos, and captions, then download your QR codes in PNG, SVG, or JPG." />
+  <meta name="keywords"
+    content="QR code generator, free QR code, custom QR code, QR code with logo, vector SVG QR code, wifi QR code, vCard QR code, offline QR generator" />
   <link rel="canonical" href="https://qro.anwincm.dev/" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Google Search Console Verification: Add your site verification token below -->
+  <!-- <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_TOKEN" /> -->
 
   <!-- PWA & Mobile Web App Meta -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -28,21 +47,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="QRo" />
   <meta property="og:url" content="https://qro.anwincm.dev/" />
-  <meta property="og:title" content="QRo - Free Custom QR Code Generator" />
+  <meta property="og:title" content="QRo | Free Custom QR Code Generator Online" />
   <meta property="og:description"
-    content="Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads." />
+    content="Create free custom QR codes for links, text, Wi-Fi, and contacts. Customize colors, styles, logos, and captions, then download your QR codes in PNG, SVG, or JPG." />
   <meta property="og:image" content="https://qro.anwincm.dev/logo512.png" />
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
-  <meta property="og:image:alt" content="QRo - Free Custom QR Code Generator" />
+  <meta property="og:image:alt" content="QRo - Free Custom QR Code Generator Online" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://qro.anwincm.dev/" />
-  <meta name="twitter:title" content="QRo - Free Custom QR Code Generator" />
+  <meta name="twitter:title" content="QRo | Free Custom QR Code Generator Online" />
   <meta name="twitter:description"
-    content="Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads." />
+    content="Create free custom QR codes for links, text, Wi-Fi, and contacts. Customize colors, styles, logos, and captions, then download your QR codes in PNG, SVG, or JPG." />
   <meta name="twitter:image" content="https://qro.anwincm.dev/logo512.png" />
 
   <!-- Google Fonts Preconnect -->
@@ -52,25 +71,51 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
-  <!-- JSON-LD Structured Data: WebApplication + FAQPage for Search Engines & Answer Engines (AEO/GEO) -->
+  <!-- JSON-LD Structured Data: WebSite + Person + WebApplication + HowTo + FAQPage (AEO/GEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://qro.anwincm.dev/#website",
+        "name": "QRo",
+        "alternateName": "QRo QR Code Generator",
+        "url": "https://qro.anwincm.dev/",
+        "description": "Create free custom QR codes for links, text, Wi-Fi, and contacts with custom styles, colors, logos, and high-resolution exports.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://qro.anwincm.dev/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://qro.anwincm.dev/#person",
+        "name": "Anwin C M",
+        "url": "https://anwincm.dev/",
+        "sameAs": [
+          "https://github.com/Imperfect-spiker28",
+          "https://www.linkedin.com/in/anwincm/"
+        ],
+        "jobTitle": "Creator & Software Developer"
+      },
+      {
         "@type": "WebApplication",
         "@id": "https://qro.anwincm.dev/#app",
-        "name": "QRo",
+        "name": "QRo QR Code Generator",
+        "alternateName": "QRo",
         "url": "https://qro.anwincm.dev/",
-        "applicationCategory": "DesignApplication, MultimediaApplication, Utility",
+        "applicationCategory": "DesignApplication, MultimediaApplication, UtilityApplication",
         "operatingSystem": "All (Web Browser, Progressive Web App)",
         "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas.",
+        "softwareVersion": "1.0.0",
+        "inLanguage": "en-US",
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
         },
-        "description": "Create beautiful, customizable QR codes for links, text, Wi-Fi and contacts. Customize styles, colors and logos, then download your QR code for free. No signup. No ads.",
+        "description": "Create free custom QR codes for links, text, Wi-Fi, and contacts. Customize colors, styles, logos, and captions, then download your QR codes in PNG, SVG, or JPG.",
         "featureList": [
           "100% Free with No Ads and No Registration Required",
           "Multiple Content Types: URLs, Plain Text, Wi-Fi Networks, Contact vCards",
@@ -80,10 +125,35 @@
           "100% Client-Side Offline Generation via Progressive Web App (PWA)"
         ],
         "author": {
-          "@type": "Person",
-          "name": "Anwin C M",
-          "url": "https://anwincm.dev/"
+          "@id": "https://qro.anwincm.dev/#person"
         }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://qro.anwincm.dev/#howto",
+        "name": "How to Create a Custom QR Code Online for Free",
+        "description": "Step-by-step instructions for creating, styling, and downloading a custom QR code using QRo.",
+        "totalTime": "PT1M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Select Content Type and Enter Details",
+            "text": "Choose your target content type (Website Link, Plain Text, Wi-Fi Network, or Contact Card) and input your destination details."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Customize Patterns, Colors, Logo, and Caption",
+            "text": "Choose a dot pattern style, select your foreground and background colors or dual-tone gradient, optionally upload a logo or use the default emblem, and adjust caption text and font."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Download in High-Resolution PNG, Scalable SVG, or JPG",
+            "text": "Select your desired export format and resolution, then click Download QR Code to save your graphic instantly with zero watermarks."
+          }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -110,7 +180,7 @@
             "name": "Can I add my logo to a QR code?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. You can upload custom PNG, JPG, or SVG logos or select the default monogram. QRo applies smart proportion limits (under 30%) and boosts Reed-Solomon error correction to Level H/Q to ensure 100% scan reliability."
+              "text": "Yes. You can upload custom PNG, JPG, or SVG logos or select the default monogram. QRo applies smart proportion limits (under 30%) and boosts Reed-Solomon error correction to Level H/Q to maximize scan reliability and damage tolerance."
             }
           },
           {
@@ -150,7 +220,15 @@
             "name": "Do QRo QR codes expire?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. QRo generates static direct QR codes where your data is encoded directly into the matrix. Because it does not route through any intermediary redirect service, your QR codes will never expire."
+              "text": "QRo generates static QR codes where your content is encoded directly into the matrix without a QRo-hosted redirect server. They do not expire due to a QRo subscription or account status. However, keep in mind that the external destination itself can change or become unavailable, and static codes cannot be edited after printing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do static QR codes provide scan analytics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Static QR codes encode raw data directly and do not inherently provide scan analytics or tracking. To measure traffic from a static link QR code, we recommend adding standard UTM parameters (e.g. ?utm_source=qr) directly to your destination URL before generating."
             }
           }
         ]

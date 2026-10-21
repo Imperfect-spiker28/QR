@@ -1,0 +1,43 @@
+# QRo QR Code Generator
+
+> Open-source, client-side, customizable QR code generator creating static QR codes for links, text, Wi-Fi networks, and contact cards (vCards).
+
+## Overview
+- **Official Website**: https://qro.anwincm.dev/
+- **Project Owner & Creator**: Anwin C M (https://anwincm.dev/)
+- **Repository**: https://github.com/Imperfect-spiker28/QR
+- **License**: MIT License (100% Free, Open Source)
+- **Architecture**: 100% Client-Side Progressive Web App (PWA) with offline generation support via HTML5 Canvas and SVG.
+
+## Key Capabilities & Supported Content Types
+1. **Website Links (URLs)**: Direct encoding of destination URLs. No intermediary redirect servers, tracking URLs, or forced domain proxies.
+2. **Plain Text**: Raw text messages, snippets, codes, or instructions.
+3. **Wi-Fi Credentials**: Seamless network connection QR codes supporting WPA/WPA2/WPA3, WEP, and unencrypted open networks.
+4. **Contact Cards (vCards)**: Direct vCard 3.0 encoding with Name, Phone, Email, Organization, and Website fields.
+
+## Aesthetic Customization & Scannability
+- **Pattern Styles**: Classic square matrix, smooth rounded dots, and modern dot matrix.
+- **Color Customization**: Custom foreground and background colors with real-time WCAG contrast safety evaluation.
+- **Gradients**: Dual-tone linear gradients (radial/linear transitions).
+- **Logo Embedding**: Center logo embedding with automatic error-correction level adjustment (Reed-Solomon Level H/Q) and smart safe area masking under 30% canvas area to preserve scan integrity.
+- **Default Logo**: Includes official Anwin brand emblem by default, fully replaceable with user-uploaded PNG, JPG, or SVG logos.
+- **Frames & Captions**: Customizable frames with "SCAN TO OPEN" (or custom text), custom caption colors, and 100+ Google Fonts.
+
+## Export Formats
+- **Raster PNG**: Ultra-high-resolution downloads (512px, 1024px, up to 2048px).
+- **Vector SVG**: Infinitely scalable vector graphics ideal for packaging, signage, billboards, and merchandise.
+- **Standard JPG**: Compact photographic format for quick digital sharing.
+
+## Privacy & Security Guarantees
+- **Zero Server Storage**: QR code generation and image rendering take place entirely inside the user's browser runtime.
+- **No Tracking Middleman**: Destination links are encoded directly without redirect URLs or subscription expirations.
+- **Zero Account Requirement**: No signups, accounts, paywalls, subscriptions, or hidden advertising.
+- **Privacy-Conscious Analytics**: Telemetry (if enabled) excludes all user-generated payloads, URLs, passwords, and contact information.
+
+## Primary Canonical URLs
+- Application & Generator: https://qro.anwincm.dev/
+- Templates: https://qro.anwincm.dev/#templates
+- FAQ Knowledge Base: https://qro.anwincm.dev/#faq
+- Design Guides & Insights: https://qro.anwincm.dev/#blog
+- XML Sitemap: https://qro.anwincm.dev/sitemap.xml
+- Robots Directives: https://qro.anwincm.dev/robots.txt

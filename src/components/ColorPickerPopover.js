@@ -102,12 +102,15 @@ export default function ColorPickerPopover({
   label = 'Select Color',
   compact = false,
   swatchPreviewStyle = null,
+  onReset = null,
+  defaultColor = null,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const popoverRef = useRef(null);
   const satValRef = useRef(null);
   const hueRef = useRef(null);
+  const nativeInputRef = useRef(null);
 
   // Decompose incoming hex into HSV & RGB
   const rgb = hexToRgb(color);
@@ -117,6 +120,7 @@ export default function ColorPickerPopover({
   const [isDraggingSat, setIsDraggingSat] = useState(false);
   const [isDraggingHue, setIsDraggingHue] = useState(false);
   const [popoverPlacement, setPopoverPlacement] = useState('bottom');
+  const [alignRight, setAlignRight] = useState(false);
 
   // Synchronize when outer color prop changes
   useEffect(() => {
@@ -137,7 +141,13 @@ export default function ColorPickerPopover({
     } else {
       setPopoverPlacement('bottom');
     }
-  }, []);
+
+    if (rect.right + 260 > window.innerWidth || (compact && rect.left > window.innerWidth / 2)) {
+      setAlignRight(true);
+    } else {
+      setAlignRight(false);
+    }
+  }, [compact]);
 
   useEffect(() => {
     if (isOpen) {
@@ -353,10 +363,28 @@ export default function ColorPickerPopover({
 
           <div
             ref={popoverRef}
-            className={`qro-picker-popover placement-${popoverPlacement}`}
+            className={`qro-picker-popover placement-${popoverPlacement} ${alignRight ? 'align-right' : ''}`}
             role="dialog"
             aria-label={`${label} Color Picker`}
           >
+            {/* Hidden native color input for system palette integration */}
+            <input
+              ref={nativeInputRef}
+              type="color"
+              value={/^#[0-9A-F]{6}$/i.test(color) ? color : '#21F1A8'}
+              onChange={(e) => {
+                const val = e.target.value.toUpperCase();
+                const newRgb = hexToRgb(val);
+                const newHsv = rgbToHsv(newRgb.r, newRgb.g, newRgb.b);
+                setHsv(newHsv);
+                setHexInput(val);
+                onChange(val);
+              }}
+              style={{ position: 'absolute', opacity: 0, pointerEvents: 'none', width: 0, height: 0 }}
+              tabIndex={-1}
+              aria-hidden="true"
+            />
+
             {/* Popover Header */}
             <div className="qro-picker-header">
               <div className="qro-picker-title-group">
@@ -364,6 +392,47 @@ export default function ColorPickerPopover({
                 <span className="qro-picker-title">{label}</span>
               </div>
               <div className="qro-picker-header-actions">
+                {onReset && (
+                  <button
+                    type="button"
+                    className="qro-picker-reset-btn"
+                    onClick={() => {
+                      onReset();
+                      if (defaultColor) {
+                        const defRgb = hexToRgb(defaultColor);
+                        const defHsv = rgbToHsv(defRgb.r, defRgb.g, defRgb.b);
+                        setHsv(defHsv);
+                        setHexInput(defaultColor.toUpperCase());
+                      }
+                    }}
+                    title="Reset to default color"
+                    aria-label="Reset color"
+                  >
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                      <path d="M3 3v5h5" />
+                    </svg>
+                    <span>Reset</span>
+                  </button>
+                )}
+
+                {/* System Native Color Picker Trigger */}
+                <button
+                  type="button"
+                  className="qro-picker-icon-action"
+                  onClick={() => nativeInputRef.current?.click()}
+                  title="Open system color palette"
+                  aria-label="Open native color picker"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="13.5" cy="6.5" r=".75" fill="currentColor" />
+                    <circle cx="17.5" cy="10.5" r=".75" fill="currentColor" />
+                    <circle cx="8.5" cy="7.5" r=".75" fill="currentColor" />
+                    <circle cx="6.5" cy="12.5" r=".75" fill="currentColor" />
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                  </svg>
+                </button>
+
                 {window.EyeDropper && (
                   <button
                     type="button"
@@ -378,6 +447,7 @@ export default function ColorPickerPopover({
                     </svg>
                   </button>
                 )}
+
                 <button
                   type="button"
                   className="qro-picker-close-btn"
@@ -483,7 +553,20 @@ export default function ColorPickerPopover({
               </div>
 
               {/* Live Preview Circle */}
-              <div className="qro-picker-live-swatch" style={{ background: color }} title={color} />
+              <div
+                className="qro-picker-live-swatch"
+                style={{ background: color, cursor: 'pointer' }}
+                title="Click to open system color picker"
+                onClick={() => nativeInputRef.current?.click()}
+                role="button"
+                tabIndex={0}
+                aria-label="Current color swatch. Click for system color picker"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    nativeInputRef.current?.click();
+                  }
+                }}
+              />
             </div>
 
             {/* Inputs: Hex and RGB numeric controls */}

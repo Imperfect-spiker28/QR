@@ -1,5 +1,33 @@
 # https://www.robotstxt.org/robotstxt.html
+# Robots policy for QRo QR Code Generator (https://qro.anwincm.dev)
+
 User-agent: *
 Allow: /
 
+# Search Engine & Generative Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap Index
 Sitemap: https://qro.anwincm.dev/sitemap.xml
+
+# LLM / AI Summary Specification
+# https://qro.anwincm.dev/llms.txt

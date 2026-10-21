@@ -1,10 +1,6 @@
 import {
-  initAnalytics,
-  trackEvent,
-  trackPageView,
   trackContentTypeSelect,
   trackQrDownload,
-  trackQrGenerateSuccess,
   trackFaqToggle,
 } from './analytics';
 import { FAQ_ITEMS } from '../App';
